@@ -18,7 +18,7 @@ This Ruby on Rails application allows users to rate stores based on various func
 ### Prerequisites
 - Ruby 3.x.x
 - Rails 7.x.x
-- PostgreSQL or MySQL
+- MySQL
 
 ### Setup Instructions
 1. Clone the repository:
