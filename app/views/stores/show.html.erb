@@ -1,0 +1,16 @@
+<h1><%= @store.name %></h1>
+<p><%= @store.address %></p>
+
+<h2>Submit a Rating</h2>
+<%= form_with model: [@store, Rating.new] do |f| %>
+  <%= f.label :rating, "Rating (1 to 5)" %>
+  <%= f.select :rating, (1..5), prompt: "Select rating" %>
+  <%= f.submit "Submit Rating" %>
+<% end %>
+
+<h2>Existing Ratings</h2>
+<ul>
+  <% @store.ratings.each do |rating| %>
+    <li><%= rating.user.name %> rated: <%= rating.rating %></li>
+  <% end %>
+</ul>
